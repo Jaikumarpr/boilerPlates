@@ -1,5 +1,5 @@
 npm init -y
-npm install express body-parser cookie-parser axios winston xml2js passport express-session morgan cors path-to-regexp
+npm install express body-parser cookie-parser axios winston xml2js passport express-session morgan cors path-to-regexp dotenv
 npm install -D @babel/cli @babel/core @babel/preset-env chai mocha nodemon prettier eslint eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
 npx install-peerdeps --dev eslint-config-airbnb
 mkdir src
