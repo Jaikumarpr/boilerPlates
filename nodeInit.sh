@@ -1,6 +1,6 @@
 npm init -y
-npm install express body-parser cookie-parser axios winston xml2js passport express-session morgan cors path-to-regexp dotenv
-npm install -D @babel/cli @babel/core @babel/preset-env chai mocha nodemon prettier eslint eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
+npm install express body-parser cookie-parser axios winston xml2js passport express-session morgan cors path-to-regexp
+npm install -D @babel/cli @babel/core @babel/preset-env @babel/plugin-transform-runtime chai mocha nodemon prettier eslint eslint-plugin-prettier eslint-config-prettier eslint-plugin-node eslint-config-node
 npx install-peerdeps --dev eslint-config-airbnb
 mkdir src
 touch src/index.js
@@ -39,6 +39,11 @@ app.listen(port, () => console.log(\`Example app listening at http:// localhost:
 echo "{
     \"presets\":[
         \"@babel/preset-env\"
+    ],
+    \"plugins\": [
+        [
+            \"@babel/transform-runtime\"
+        ]
     ]
 }" >> .babelrc
 
@@ -57,5 +62,10 @@ echo "{
         \"no-process-exit\": \"off\",
         \"object-shorthand\": \"off\",
         \"class-methods-use-this\": \"off\"
+    },
+    ,
+    \"parserOptions\": {
+        \"ecmaVersion\": 11,
+        \"sourceType\": \"module\"
     }
 }" >> .eslintrc.json
