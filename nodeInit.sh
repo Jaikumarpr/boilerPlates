@@ -63,7 +63,6 @@ echo "{
         \"object-shorthand\": \"off\",
         \"class-methods-use-this\": \"off\"
     },
-    ,
     \"parserOptions\": {
         \"ecmaVersion\": 11,
         \"sourceType\": \"module\"
